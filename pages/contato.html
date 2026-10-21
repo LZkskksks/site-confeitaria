@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pedidos | Confeitaria Sempre Doce</title>
+
+    <link rel="stylesheet" href="../css/contato.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="div-logo">
+            <img class="logotipo" src="../img/logo.png"
+                 alt="Logotipo da Confeitaria Sempre Doce">
+        </div>
+
+        <div class="div-menu">
+            <h1>Confeitaria Sempre Doce</h1>
+
+            <br>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contato">
+
+        <section class="contato-intro">
+            <h2>Faça seu Pedido </h2>
+
+            <p>
+                Escolha seu doce favorito e preencha os dados abaixo
+                para solicitar sua encomenda!
+            </p>
+        </section>
+
+        <div class="contato-conteudo">
+
+            <!-- Informações da confeitaria -->
+            <section class="contato-informacoes">
+                <h3>Fale com a gente!</h3>
+
+                <p>
+                    Tem alguma dúvida sobre os produtos ou deseja
+                    personalizar seu pedido? Estamos aqui para ajudar!
+                </p>
+
+                <div class="informacao">
+                    <h4> Endereço</h4>
+                    <p>Adicione aqui o endereço da confeitaria.</p>
+                </div>
+
+                <div class="informacao">
+                    <h4> Telefone</h4>
+                    <p>Adicione aqui o telefone da confeitaria.</p>
+                </div>
+
+                <div class="informacao">
+                    <h4>E-mail</h4>
+                    <p>Adicione aqui o e-mail da confeitaria.</p>
+                </div>
+            </section>
+
+            <!-- Formulário de pedidos -->
+            <section class="contato-formulario">
+                <h3>Formulário de Pedido</h3>
+
+                <form id="formPedido" action="#" method="post">
+
+                    <!-- Dados do cliente -->
+                    <h4 class="titulo-secao">Dados do cliente</h4>
+
+                    <label for="nome">Nome completo</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome completo"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <label for="endereco">Endereço completo</label>
+                    <input
+                        type="text"
+                        id="endereco"
+                        name="endereco"
+                        placeholder="Rua, número, bairro e cidade"
+                        autocomplete="street-address"
+                        required
+                    >
+
+                    <label for="telefone">Telefone</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(00) 00000-0000"
+                        autocomplete="tel"
+                        required
+                    >
+
+                    <!-- Detalhes do pedido -->
+                    <h4 class="titulo-secao">Detalhes do pedido</h4>
+
+                    <label for="item">Escolha o produto</label>
+                    <select id="item" name="item" required>
+                        <option value="" data-preco="0">
+                            Selecione um produto
+                        </option>
+
+                        <option value="Bolo de Chocolate" data-preco="60">
+                            Bolo de Chocolate - R$ 60,00
+                        </option>
+
+                        <option value="Bolo de Morango" data-preco="70">
+                            Bolo de Morango - R$ 70,00
+                        </option>
+
+                        <option value="Bolo de Cenoura" data-preco="45">
+                            Bolo de Cenoura - R$ 45,00
+                        </option>
+                    </select>
+
+                    <label for="quantidade">Quantidade</label>
+                    <input
+                        type="number"
+                        id="quantidade"
+                        name="quantidade"
+                        min="1"
+                        max="100"
+                        value="1"
+                        required
+                    >
+
+                    <label for="informacoes">
+                        Informações adicionais do pedido
+                    </label>
+                    <textarea
+                        id="informacoes"
+                        name="informacoes"
+                        rows="4"
+                        placeholder="Descreva o tamanho, recheio, decoração, data desejada para entrega ou outras preferências."
+                    ></textarea>
+
+                    <!-- Total calculado automaticamente -->
+                    <label for="total">Total do pedido</label>
+                    <input
+                        type="text"
+                        id="total"
+                        name="total"
+                        value="R$ 0,00"
+                        readonly
+                    >
+
+                    <!-- Pagamento -->
+                    <h4 class="titulo-secao">Forma de pagamento</h4>
+
+                    <label for="pagamento">Selecione o pagamento</label>
+                    <select id="pagamento" name="pagamento" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="Pix">Pix</option>
+                        <option

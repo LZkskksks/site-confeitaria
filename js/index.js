@@ -1,23 +1,25 @@
+// Declaração de variáveis
 let indice = 0
 let imagens = [
-    "imgs/bolo1.webp",
-    "imgs/bolo2.jpg",
-    "imgs/bolo3.jpg",
-    "imgs/bolo4.webp"
-
+    "img/bolo1.png",
+    "img/bolo2.png",
+    "img/bolo3.png",
+    "img/bolo4.png"
 ]
-function trocar(){
+
+// Função para trocar a imagem
+function trocar() {
     let img = document.getElementById("img")
     img.src = imagens[indice]
 }
 
-setInterval(function(){
+// Lógica para trocar de imagem
+setInterval(function() {
     trocar()
     indice++
 
-    if (indice >= imagens.length){
+    if (indice >= imagens.length) {
         indice = 0
     }
-}, 2000)
 
-    
+}, 1000)

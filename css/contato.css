@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    background-color: #fffaf5;
+    color: #5b4140;
+}
+
+
+header {
+    min-height: 200px;
+    display: flex;
+    background-color: #FDF4E9;
+}
+
+.div-logo {
+    width: 15%;
+    min-height: 194px;
+}
+
+.logotipo {
+    height: 190px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.div-menu {
+    width: 85%;
+    min-height: 194px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    color: #D48884;
+    font-size: 45px;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #D48884;
+    font-size: 25px;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.contato {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 25px 45px;
+}
+
+.contato-intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.contato h2 {
+    color: #D48884;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.contato-intro p {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+.contato-conteudo {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.contato-informacoes,
+.contato-formulario {
+    background-color: #FDF4E9;
+    border: 2px solid #E8C6BE;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 14px rgba(100, 60, 50, 0.10);
+}
+
+.contato h3 {
+    color: #D48884;
+    font-size: 27px;
+    margin-bottom: 18px;
+}
+
+.contato-informacoes > p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.informacao {
+    margin-top: 22px;
+}
+
+.informacao h4 {
+    color: #D48884;
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.informacao p {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+
+.contato-formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-formulario label {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 12px 0 6px;
+}
+
+.contato-formulario input,
+.contato-formulario select,
+.contato-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #DDB6B0;
+    border-radius: 6px;
+    background-color: #fffdfb;
+    color: #5b4140;
+    font-size: 15px;
+}
+
+.contato-formulario input:focus,
+.contato-formulario select:focus,
+.contato-formulario textarea:focus {
+    outline: 2px solid #D48884;
+    outline-offset: 1px;
+}
+
+.contato-formulario textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contato-formulario button {
+    margin-top: 22px;
+    padding: 14px;
+    background-color: #D48884;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contato-formulario button:hover {
+    background-color: #BD706D;
+    transform: translateY(-2px);
+}
+
+
+footer {
+    background-color: #D48884;
+    min-height: 50px;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+
+@media (max-width: 900px) {
+    header {
+        align-items: center;
+        padding: 10px;
+    }
+
+    .div-logo {
+        width: 20%;
+        min-height: auto;
+    }
+
+    .logotipo {
+        height: auto;
+        max-height: 150px;
+        width: 100%;
+    }
+
+    .div-menu {
+        width: 80%;
+        min-height: auto;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        gap: 10px 15px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    .contato-conteudo {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+
+    .div-logo,
+    .div-menu {
+        width: 100%;
+    }
+
+    .logotipo {
+        height: 110px;
+        width: auto;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    ul {
+        gap: 10px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    .contato {
+        padding: 25px 15px;
+    }
+
+    .contato h2 {
+        font-size: 30px;
+    }
+
+    .contato-intro p {
+        font-size: 16px;
+    }
+
+    .contato-informacoes,
+    .contato-formulario {
+        padding: 20px;
+    }
+
+    .contato h3 {
+        font-size: 23px;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+}
